@@ -16,12 +16,12 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // ===================== Smooth scroll (if nav exists) =====================
 const nav = document.querySelector('.nav');
-if (nav){
+if (nav) {
   nav.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
       const target = document.querySelector(a.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior:'smooth' });
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
     });
   });
 }
@@ -44,7 +44,7 @@ window.addEventListener('scroll', () => {
   });
 
   // Auto-hide nav
-  if (nav){
+  if (nav) {
     if (window.pageYOffset > lastScrollY) nav.style.top = '-80px';
     else nav.style.top = '18px';
   }
